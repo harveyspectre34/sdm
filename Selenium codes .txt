@@ -1,0 +1,213 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.edge.EdgeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class NameType {
+
+	public static void main(String[] args) {
+		WebDriverManager.edgedriver().setup();
+		WebDriver driver=new EdgeDriver();
+		
+		driver.get("https://www.google.com");
+		WebElement search= driver.findElement(By.name("q"));
+		search.sendKeys("Krishna Pandit");
+		
+		
+		/*frame will cut down the code in respective area
+		 multiple windows
+		 alert/pop up*/
+		//two types of x-path relative and absolute
+		
+		///html/body/div/div/div[2]/div[1]/div/div/form/div[1]/input
+		////*[@id="username"]
+	
+		
+		
+	}
+
+}
+
+
+--------------------------------------------------------------------------------------------------
+
+
+
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Test1{
+	public static void main(String [] args) {
+		WebDriverManager.edgedriver().setup();
+		WebDriver driver=new EdgeDriver();
+		
+		driver.get("https://www.youtube.com");
+		
+	}
+}
+
+
+---------------------------------------------------------------------------------------------------
+
+
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.edge.EdgeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Sauce {
+
+	public static void main(String[] args) {
+
+	
+		WebDriverManager.edgedriver().setup();
+		WebDriver driver=new EdgeDriver();
+		
+		driver.get("https://www.saucedemo.com/");
+		WebElement search= driver.findElement(By.xpath("//*[@id=\"user-name\"]"));
+		search.click();
+		search.sendKeys("standard_user");
+		
+		WebElement pass= driver.findElement(By.name("password"));
+		pass.click();
+		pass.sendKeys("secret_sauce");
+		
+		
+		WebElement log= driver.findElement(By.id("login-button"));
+		log.click();
+		
+		
+		/* launch www.sauced demo.com 
+		 * 1. user-name by x-path
+		 * 2. password by name
+		 * 3. login by id
+		 */
+			
+		
+		/*selectisvisibletext: method for single value drop down selector
+		 * by index for multi-valued selector
+		 * 
+		 * switchTo().frame(frame);
+		 * WbElement drag= driver.findElement(by.id(""));
+		 * 
+		 * Actions action=new Actions(driver);
+		 * 
+		 * action.draganddroBy(element,50,50).perform();
+		 * 
+		 * used draganddrop
+		 * used pop-up using alert and display 2 buttons in it accept and dismiss
+		 * 
+		 * used multiple windows also maximize window minimze and go from 1 to 5 using (goto) foward backward method or another page refresh the page click on hyper-links 
+		 * thread.sleep(5000)for speed setting
+		 * close one and back to one page
+		 * 
+		 *  
+		 *  String MainWindow=driver.getWindowHandle();
+		 *  
+		 *  
+		 *  if a process is going and i want to close the method in between so we make use of quit
+		 *  
+		 *  and if we want to exit after completing we use close.
+		 *  
+		 *  resize a box and extend the size beyond iframe 
+		 *  
+		 *  Also add scroll action
+		 *  
+		 *  locator names
+		 *  sequence of activity
+		 *  
+		 *  test engine to plugin 
+		 *  
+		 *  pom.xml me test engne ka dependcies add karo
+		 *  
+		 *  selenium cannot execute multiple pages at a time for that we require test engine
+		 *  go to help eclipse market place and search test engine and add it then test engine will work
+		 *  
+		 *  @test :annotation using it we can run multiple page at the same time
+		 *  and how to view result on console and generate end user report.
+		 *  index.html
+		 *  emailareport page
+		 *  we can also see our report
+		 * */ 
+		
+	}
+
+}
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.edge.EdgeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+
+public class WebElements {
+
+	public static void main(String[] args) {
+		WebDriverManager.edgedriver().setup();
+		WebDriver driver=new EdgeDriver();
+		
+		driver.get("https://demo.guru99.com/test/radio.html");
+		
+		//WebElement radio1= driver.findElement(By.id("vfb-7-1"));
+		//WebElement radio2= driver.findElement(By.id("vfb-7-2"));
+		
+		WebElement checkbox1= driver.findElement(By.id("vfb-7-1"));
+		
+		//radio1.click();
+		checkbox1.click();
+		System.out.println("Radio Button Option 1 Selected");
+	}
+
+}
+
+
+-------------------------------------------------------------------------------
+
+
+
+<project xmlns="https://maven.apache.org/POM/4.0.0" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>Selenium</groupId>
+  <artifactId>Selenium</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>Selenium</name>
+  <description>Selenium</description>
+  
+  <dependencies>
+  
+  <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>3.14.0</version>
+</dependency>
+
+ <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+<dependency>
+    <groupId>io.github.bonigarcia</groupId>
+    <artifactId>webdrivermanager</artifactId>
+    <version>5.3.0</version>
+</dependency>
+
+</dependencies>
+  
+
+  
+  
+ 
+
+  
+  </project>
