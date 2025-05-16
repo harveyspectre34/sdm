@@ -1,0 +1,39 @@
+Linux Commands
+
+1.ls      -- to display the files and directories or path in the terminal
+2.mkdir   -- to create new directory(floder)
+3.cd      -- change directory
+4.pwd     -- print current working directory
+5.whoami  -- gives username
+6.mv      -- to rename file
+7.cp      -- copy file
+8.ls -lrt -- shows read, write, execute permissions for files
+9.chmod   -- use to give permission to files
+10.touch  -- to create file
+11.rmdir  -- remove directory
+12.nano   -- to open editor
+13.cat    -- display content
+14. echo $0
+15. ./filename
+16. $user
+17. $pwd
+18. history
+19. grep
+20. sort
+21. sort -r
+22. head
+23. tail
+24. cut
+25. diff
+
+
+
+whoami
+ls
+ls -lrt  
+mkdir
+cd
+cd..
+mv
+cp 
+chmod
